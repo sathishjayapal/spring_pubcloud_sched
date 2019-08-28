@@ -23,6 +23,7 @@ public class DemoApplication {
 
   @Scheduled(fixedDelay = 1000L)
   public void connectDB() {
+    System.out.println("Starting here");
     System.out.println(jdbcTemplate.queryForObject("select 1", String.class));
   }
 
