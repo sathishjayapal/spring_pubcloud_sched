@@ -20,10 +20,11 @@ public class DemoApplication {
     SpringApplication.run(DemoApplication.class, args);
 
   }
-
+static int i=0;
   @Scheduled(fixedDelay = 1000L)
   public void connectDB() {
-    System.out.println("Starting here");
+    
+    System.out.println("Starting here "+i++);
     System.out.println(jdbcTemplate.queryForObject("select 1", String.class));
   }
 
